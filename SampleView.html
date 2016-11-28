@@ -70,9 +70,10 @@
          <div class="row">
             <div class="col-sml-12">
               <nav>
-                <div class="nav-wrapper indigo flow-text"> <!--deep-purple lighten-2 can be used-->
+                <div class="nav-wrapper flow-text" id="fixedHeader"> <!--deep-purple lighten-2 can be used-->
                   <a href="#" class="brand-logo"><img src="missionRnD.png" alt="Mission R and D 2017"></a>
-                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				  <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="people.html">People</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
@@ -81,6 +82,17 @@
                        <a href="#modal1">Login</a>
                     </li>
                   </ul>
+				  <ul id="mobile-demo" class="side-nav">
+                     <li class="no-padding">
+                       <ul class="collapsible collapsible-accordion">
+					     <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="home.html">Home</a></li>
+						 <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="people.html">People</a></li>
+						 <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="testimonials.html">Testimonials</a></li>
+						 <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="nextProgram.html">Mission RnD 2017</a></li>
+						 <li class="bold"><a class="collapsible-header  waves-effect waves-teal" href="#modal1">Login</a></li>
+					   </ul>
+					 </li>
+				  </ul>
                 </div>
               </nav>
             </div>
@@ -88,7 +100,7 @@
          <!--end of the top bar--> 
 
          <div class="parallax-container">
-      		<div class="parallax"><img src="parallaxImg.jpg"></div>
+      		<div class="parallax"><img src="parallaxImg.jpg" class="responsive-img"></div>
     	</div>
 
          <!--start Content Card 1 -->
@@ -159,7 +171,7 @@
 
          <!--start of the footer area -->
          <div class="row">
-           
+		 
          </div>
          <!--end of the row--> 
 
@@ -171,9 +183,9 @@
 
          $(document).ready(function () {
              // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-              $('.modal').modal();
+             $(".button-collapse").sideNav();
+			 $('.modal').modal();
               $('.parallax').parallax();
-
          });
       </script>
 
