@@ -1,0 +1,16 @@
+.filters{
+ background-color: #f4f4f4;
+ float: left;
+ overflow: hidden;
+ padding: 0px 10px 20px 10px;
+ border: 1px solid #e6e6e6;
+ width: 200px;
+ margin-top: 30px;
+ margin-right: 5px;
+}
+#leftContainer{
+  background-color: #f4f4f4;
+}
+#rightContainer{
+  background-color: #CCCCCC;
+}
